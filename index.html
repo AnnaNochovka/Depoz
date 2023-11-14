@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Розрахуйте суму депозиту так, щоб при обраних змінних, отримане число дорівнювало 2400грн. </p>
+    Оберіть на скільки років ви вклали депозит:
+    <select name="" id="a">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    <br>
+    Оберіть під який відсоток:
+    <select name="" id="b">
+        <option value="3">3</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+    </select>
+    <br>
+    Оберіть початкову суму вкладу:
+    <select name="" id="c">
+        <option value="1000">1000</option>
+        <option value="1500">1500</option>
+        <option value="2000">2000</option>
+        <option value="2500">2500</option>
+    </select>
+    <p id="result"></p>
+    <script>
+        val_a = document.getElementById("a");
+        val_b = document.getElementById("b");
+        val_c = document.getElementById("c");
+        res = document.getElementById("result");
+        val_a.addEventListener("change",func_a);
+
+        val_b.addEventListener("change",func_b);
+        val_c.addEventListener("change",func_c);
+        function func_a(){
+            console.log(val_a.value);
+            console.log(val_b.value);
+            console.log(val_c.value);
+            r = parseInt(val_a.value);
+            d = parseInt(val_b.value);
+            f = parseInt(val_c.value);
+            console.log(d);
+            console.log(r);
+            console.log(f);
+            s = f*(1+r*d/100);
+            
+            str = "Сума депозиту: "+s; 
+            res.innerHTML=str;
+        }
+        function func_b(){
+            console.log(val_a.value);
+            console.log(val_b.value);
+            console.log(val_c.value);
+            r = parseInt(val_a.value);
+            d = parseInt(val_b.value);
+            f = parseInt(val_c.value);
+            console.log(d);
+            console.log(r);
+            console.log(f);
+            s = f*(1+r*d/100);
+            
+            str = "Сума депозиту: "+s; 
+            res.innerHTML=str;
+        }
+        function func_c(){
+            console.log(val_a.value);
+            console.log(val_b.value);
+            console.log(val_c.value);
+            r = parseInt(val_a.value);
+            d = parseInt(val_b.value);
+            f = parseInt(val_c.value);
+            console.log(d);
+            console.log(r);
+            console.log(f);
+            s = f*(1+r*d/100);
+            
+            str = "Сума депозиту: "+s; 
+            res.innerHTML=str;
+        }
+    </script>
+</body>
+</html>
